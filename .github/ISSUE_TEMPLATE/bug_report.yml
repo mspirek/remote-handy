@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a problem with Remote Handy.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove private transcript text, usernames, client names, machine names, and local paths before posting.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, Handy version, Remote Handy version, and remote-control app.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized Diagnostics
+      description: Paste sanitized diagnostics if available.
+      render: text
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps To Reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior

@@ -1,0 +1,19 @@
+name: Build and test
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  macos:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Toolchain
+        run: swift --version
+      - name: Fixtures
+        run: make test-fixtures
+      - name: Public source scan
+        run: make privacy-scan
+      - name: App bundles
+        env:
+          REMOTE_HANDY_CODESIGN_IDENTITY: '-'
+        run: make build-menubar-app

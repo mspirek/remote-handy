@@ -1,0 +1,11 @@
+.build/
+.swiftpm/
+DerivedData/
+*.xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.log
+/.module-cache/
+
+# Local output kept out of git (2026-10-15 checkpoint)
+.DS_Store
