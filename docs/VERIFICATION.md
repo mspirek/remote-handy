@@ -4,7 +4,9 @@ October 21, 2026. Source-build alpha 0.1.0. macOS 27.0.1, Handy 0.9.8, Apple Scr
 
 ## Automated checks
 
-Fixture coverage includes read-only Handy database access, processed/raw fallback, Unicode, blank/pruned rows, missing/incompatible databases, temporary writer locks, stabilization, cancellation, settings roundtrip and invalid timing normalization, single-instance ownership, clipboard formatting, and process-scoped paired paste suppression. Fixtures and native app build pass locally. Public CI is configured separately.
+Fixture coverage includes read-only Handy database access, processed/raw fallback, Unicode, blank/pruned rows, missing/incompatible databases, temporary writer locks, stabilization, cancellation, settings roundtrip and invalid timing normalization, single-instance ownership, clipboard formatting, and process-scoped paired paste suppression. Fixtures, privacy scan and both native app builds also pass from a clean export of the published source. Installer shell syntax and launch-agent plist validation pass.
+
+Public [GitHub Actions](https://github.com/mspirek/remote-handy/actions) is configured for macOS 26. The first run was queued at publication, so this record does not claim a hosted CI pass. Check the linked run status for current results.
 
 ## Native evidence
 
